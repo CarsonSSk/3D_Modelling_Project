@@ -1,6 +1,6 @@
 # COMP-371
 Computer Graphics 
-# 3D Triangle Operations
+# PART 1
 
 ## Description
 
