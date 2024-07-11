@@ -1,6 +1,6 @@
 # COMP-371
 Computer Graphics 
-# PART 1
+# Sprint 1
 
 ## Description
 
