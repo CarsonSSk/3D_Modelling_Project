@@ -13,8 +13,9 @@ This project implements a simple program to manipulate and calculate properties 
 - `Triangle.h`: Header file for the Triangle class.
 - `Triangle.cpp`: Implementation file for the Triangle class.
 - `main.cpp`: Main driver file that provides a menu for interacting with the triangle.
-- `ExampleRun2.txt`: A sample run that shows all the functionality of your code.
 - `Part1.cpp`: Main driver file for Part 1, which includes functions to create, initialize, print, and delete a dynamic array.
+- `ExampleRun1.txt`: A sample run that shows all the functionalities of Part 1.
+- `ExampleRun2.txt`: A sample run that shows all the functionalities of Part 2.
 
 ## Requirements
 
