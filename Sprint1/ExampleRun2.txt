@@ -1,3 +1,7 @@
+PS C:\Users\Carson\Desktop\Comp371Repo\COMP-371\Sprint1> .\part2.exe
+>>
+
+
 Menu:
 1. Display triangle coordinates
 2. Translate triangle
@@ -5,10 +9,12 @@ Menu:
 4. Exit
 Enter your choice: 1
 
+
 Triangle vertices:
-(0, 0, 0)
-(3, 0, 0)
-(0, 4, 0)
+(5, 5, 0)
+(3, 1, 1)
+(1, 4, 4)
+
 
 Menu:
 1. Display triangle coordinates
@@ -17,9 +23,11 @@ Menu:
 4. Exit
 Enter your choice: 2
 
-Enter distance to translate: 2
+
+Enter distance to translate: -3
 Enter axis (x, y, or z): x
 Triangle translated.
+
 
 Menu:
 1. Display triangle coordinates
@@ -28,10 +36,12 @@ Menu:
 4. Exit
 Enter your choice: 1
 
+
 Triangle vertices:
-(2, 0, 0)
-(5, 0, 0)
-(2, 4, 0)
+(2, 5, 0)
+(0, 1, 1)
+(-2, 4, 4)
+
 
 Menu:
 1. Display triangle coordinates
@@ -40,8 +50,19 @@ Menu:
 4. Exit
 Enter your choice: 3
 
-Area of the triangle: 6
 
+Area of the triangle: 10.4523
+
+
+Menu:
+1. Display triangle coordinates
+2. Translate triangle
+3. Calculate triangle area
+4. Exit
+Enter your choice: 4
+
+
+PS C:\Users\Carson\Desktop\Comp371Repo\COMP-371\Sprint1>
 Menu:
 1. Display triangle coordinates
 2. Translate triangle
@@ -52,6 +73,8 @@ Enter your choice: 2
 Enter distance to translate: 2.3
 Enter axis (x, y, or z): x
 Invalid distance input.
+PS C:\Users\Carson\Desktop\COMP 371\Assignment 1>
+
 
 Menu:
 1. Display triangle coordinates
@@ -64,12 +87,11 @@ Enter your choice: 2
 Enter distance to translate: -8
 Enter axis (x, y, or z): m
 Invalid axis input.
+PS C:\Users\Carson\Desktop\COMP 371\Assignment 1>
 
 1. Display triangle coordinates
 2. Translate triangle
 3. Calculate triangle area
 4. Exit
 Enter your choice: 4
-
-
 PS C:\Users\Carson\Desktop\COMP 371\Assignment 1>
