@@ -48,6 +48,7 @@ int Point::translate(const string& d_str, char axis) {
             z += d;
             break;
     }
+    
     return 0;
 }
 

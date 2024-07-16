@@ -37,6 +37,20 @@ int main() {
                 cout << "Enter axis (x, y, or z): ";
                 cin >> axis;
                 int result = triangle.translate(d_str, axis);
+                if (result == 0) {
+
+                    cout << "Triangle translated.\n";
+
+                } else if (result == -1) {
+
+                    return -1;
+                    break;
+
+                } else if (result == -2) {
+                    
+                    return -2;
+                    break;
+                }
                 break;
             }
             case 3:

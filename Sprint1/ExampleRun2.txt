@@ -1,5 +1,4 @@
 Menu:
-
 1. Display triangle coordinates
 2. Translate triangle
 3. Calculate triangle area
@@ -12,7 +11,6 @@ Triangle vertices:
 (0, 4, 0)
 
 Menu:
-
 1. Display triangle coordinates
 2. Translate triangle
 3. Calculate triangle area
@@ -24,7 +22,6 @@ Enter axis (x, y, or z): x
 Triangle translated.
 
 Menu:
-
 1. Display triangle coordinates
 2. Translate triangle
 3. Calculate triangle area
@@ -37,7 +34,6 @@ Triangle vertices:
 (2, 4, 0)
 
 Menu:
-
 1. Display triangle coordinates
 2. Translate triangle
 3. Calculate triangle area
@@ -47,6 +43,27 @@ Enter your choice: 3
 Area of the triangle: 6
 
 Menu:
+1. Display triangle coordinates
+2. Translate triangle
+3. Calculate triangle area
+4. Exit
+Enter your choice: 2
+
+Enter distance to translate: 2.3
+Enter axis (x, y, or z): x
+Invalid distance input.
+
+Menu:
+1. Display triangle coordinates
+2. Translate triangle
+3. Calculate triangle area
+4. Exit
+Enter your choice: 2
+
+
+Enter distance to translate: -8
+Enter axis (x, y, or z): m
+Invalid axis input.
 
 1. Display triangle coordinates
 2. Translate triangle
