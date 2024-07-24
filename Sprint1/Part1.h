@@ -1,7 +1,7 @@
 #ifndef PART1_H
 #define PART1_H
 
-// Function prototypes
+// Function skeletons
 int* createArray(int size);
 void initializeArray(int* array, int size);
 void printArray(int* array, int size);

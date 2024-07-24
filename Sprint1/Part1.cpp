@@ -45,5 +45,6 @@ void printArray(int* array, int size) {
 
 void deleteArray(int* array) {
     delete[] array;
+    array = nullptr;
 }
 

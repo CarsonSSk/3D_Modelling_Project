@@ -58,8 +58,11 @@ int main() {
                 break;
             case 4:
                 delete p1;
+                p1 =nullptr;
                 delete p2;
+                p2 =nullptr;
                 delete p3;
+                p3 =nullptr;
                 return 0;
             default:
                 cout << "Invalid choice. Try again.\n";
