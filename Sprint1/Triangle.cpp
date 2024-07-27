@@ -56,20 +56,3 @@ void Triangle::display() const {
     vertex_3->display();
     std::cout << "\n";
 }
-
-
-
-/*double Triangle::calcArea() const {
-    double a = sqrt(pow(vertex_2->x - vertex_1->x, 2) +
-                    pow(vertex_2->y - vertex_1->y, 2) +
-                    pow(vertex_2->z - vertex_1->z, 2));
-    double b = sqrt(pow(vertex_3->x - vertex_2->x, 2) +
-                    pow(vertex_3->y - vertex_2->y, 2) +
-                    pow(vertex_3->z - vertex_2->z, 2));
-    double c = sqrt(pow(vertex_1->x - vertex_3->x, 2) +
-                    pow(vertex_1->y - vertex_3->y, 2) +
-                    pow(vertex_1->z - vertex_3->z, 2));
-
-    double s = (a + b + c) / 2;
-    return sqrt(s * (s - a) * (s - b) * (s - c));
-}*/

@@ -1,10 +1,5 @@
 #include <iostream>
-
-// Function prototypes
-int* createArray(int size);
-void initializeArray(int* array, int size);
-void printArray(int* array, int size);
-void deleteArray(int* array);
+#include "Part1.h"
 
 int main() {
     int size;
@@ -50,5 +45,6 @@ void printArray(int* array, int size) {
 
 void deleteArray(int* array) {
     delete[] array;
+    array = nullptr;
 }
 
