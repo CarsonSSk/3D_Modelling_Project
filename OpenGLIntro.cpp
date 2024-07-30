@@ -71,9 +71,7 @@ GLuint createShaderProgram(const char* vertexSource, const char* fragmentSource)
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    // Make the viewport square
-    int size = (width < height) ? width : height;
-    glViewport(0, 0, size, size);
+    glViewport(0, 0, width, height);
 }
 
 void processInput(GLFWwindow* window, glm::mat4& translation, glm::mat4& rotation, glm::mat4& scale) {
@@ -153,30 +151,29 @@ int main() {
     glm::mat4 projection = glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
 
     while (!glfwWindowShouldClose(window)) {
-    processInput(window, translation, rotation, scale);
+        processInput(window, translation, rotation, scale);
 
-    glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-    glUseProgram(shaderProgram);
+        glUseProgram(shaderProgram);
 
-    // Apply aspect ratio to the scaling transformation
-    int width, height;
-    glfwGetFramebufferSize(window, &width, &height);
-    float aspectRatio = static_cast<float>(width) / static_cast<float>(height);
-    glm::mat4 aspectScale = glm::scale(glm::mat4(1.0f), glm::vec3(aspectRatio, 1.0f, 1.0f));
+        // Apply aspect ratio to the scaling transformation
+        int width, height;
+        glfwGetFramebufferSize(window, &width, &height);
+        float aspectRatio = static_cast<float>(width) / static_cast<float>(height);
+        glm::mat4 aspectScale = glm::scale(glm::mat4(1.0f), glm::vec3(aspectRatio, 1.0f, 1.0f));
 
-    // Apply transformations in the correct order
-    glm::mat4 transform = translation * rotation * aspectScale * scale;
-    unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
-    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        // Apply transformations in the correct order
+        glm::mat4 transform = translation * rotation * aspectScale * scale;
+        unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
 
-    glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 
-    glfwSwapBuffers(window);
-    glfwPollEvents();
+        glfwSwapBuffers(window);
+        glfwPollEvents();
     }
-
 
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
