@@ -153,23 +153,30 @@ int main() {
     glm::mat4 projection = glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
 
     while (!glfwWindowShouldClose(window)) {
-        processInput(window, translation, rotation, scale);
+    processInput(window, translation, rotation, scale);
 
-        glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT);
 
-        glUseProgram(shaderProgram);
+    glUseProgram(shaderProgram);
 
-        // Combine the transformation matrices
-        glm::mat4 transform = projection * translation * rotation * scale;
-        unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+    // Apply aspect ratio to the scaling transformation
+    int width, height;
+    glfwGetFramebufferSize(window, &width, &height);
+    float aspectRatio = static_cast<float>(width) / static_cast<float>(height);
+    glm::mat4 aspectScale = glm::scale(glm::mat4(1.0f), glm::vec3(aspectRatio, 1.0f, 1.0f));
 
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+    // Apply transformations in the correct order
+    glm::mat4 transform = translation * rotation * aspectScale * scale;
+    unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
+    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+    glBindVertexArray(VAO);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+
+    glfwSwapBuffers(window);
+    glfwPollEvents();
     }
+
 
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
