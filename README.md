@@ -1,7 +1,3 @@
-# COMP-371
-Computer Graphics 
-# Sprint 1
-
 ## Description
 
 This project implements a simple program to manipulate and calculate properties of a triangle defined by three points in 3D space. The program allows the user to translate the triangle along the x, y, or z axis, display the coordinates of the triangle's vertices, and calculate the area of the triangle.
